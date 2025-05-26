@@ -1,5 +1,5 @@
 ### POST buat user baru
-POST http://localhost:5000/api/register
+POST http://https://hazel-airlock-451115-h0.et.r.appspot.com/api/register
 Content-Type: application/json
 
 {
