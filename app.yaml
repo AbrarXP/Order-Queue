@@ -1,3 +1,10 @@
-runtime: nodejs18
-instance_class: F1
-entrypoint: npm start
+runtime: nodejs20  # gunakan nodejs20 (atau nodejs22 jika sudah tersedia)
+
+instance_class: F1  # kelas instance (F1 adalah yang termurah)
+
+env_variables:
+  PORT: 8080  # port default App Engine Standard
+
+automatic_scaling:
+  max_instances: 2
+  min_instances: 1
