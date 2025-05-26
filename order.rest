@@ -1,0 +1,39 @@
+### POST buat order baru
+POST http://localhost:5000/api/order
+Content-Type: application/json
+
+{
+  "userID": "1",
+  "menuID": "1",
+  "status": "Pending"
+}
+
+###
+
+### GET semua menu
+GET http://localhost:5000/api/order
+Content-Type: application/json
+
+###
+
+### GET menu by ID
+GET http://localhost:5000/api/order/1
+Content-Type: application/json
+
+###
+
+### PUT update menu
+PUT http://localhost:5000/api/order/1
+Content-Type: application/json
+
+{
+  "userID": "1",
+  "menuID": "1",
+  "status": "Done"
+}
+
+###
+
+### DELETE menu
+DELETE http://localhost:5000/api/order/1
+Content-Type: application/json
