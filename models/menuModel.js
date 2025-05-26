@@ -3,7 +3,7 @@ import db from "../config/database.js";
 
 // Membuat tabel "men"
 const Menu = db.define(
-  "menu", // Nama Tabe
+  "menus", // Nama Tabe
   {
     menuID: {
         type: DataTypes.INTEGER,

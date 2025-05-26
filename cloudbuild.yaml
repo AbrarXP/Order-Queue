@@ -1,14 +1,26 @@
 steps:
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/resto-be", "."]
 
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run', 'build']
-    # Hapus step ini kalau tidak ada script "build" di package.json
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/resto-be"]
 
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy', '--quiet']
-
-# Optional: notifikasi atau log sink bisa ditambahkan
-
-timeout: 900s
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "resto-be",
+        "--image",
+        "gcr.io/$PROJECT_ID/resto-be",
+        "--timeout",
+        "2000s",
+        "--port",
+        "5000",
+        "--region",
+        "us-central1",
+        "--allow-unauthenticated",
+      ]
+options:
+  logging: CLOUD_LOGGING_ONLY
