@@ -1,5 +1,5 @@
 ### POST buat order baru
-POST http://localhost:5000/api/order
+POST https://hazel-airlock-451115-h0.et.r.appspot.com/api/order
 Content-Type: application/json
 
 {
@@ -11,19 +11,19 @@ Content-Type: application/json
 ###
 
 ### GET semua menu
-GET http://localhost:5000/api/order
+GET https://hazel-airlock-451115-h0.et.r.appspot.com/api/order
 Content-Type: application/json
 
 ###
 
 ### GET menu by ID
-GET http://localhost:5000/api/order/1
+GET https://hazel-airlock-451115-h0.et.r.appspot.com/api/order/2
 Content-Type: application/json
 
 ###
 
 ### PUT update menu
-PUT http://localhost:5000/api/order/1
+PUT https://hazel-airlock-451115-h0.et.r.appspot.com/api/order/2
 Content-Type: application/json
 
 {
@@ -35,5 +35,5 @@ Content-Type: application/json
 ###
 
 ### DELETE menu
-DELETE http://localhost:5000/api/order/1
+DELETE https://hazel-airlock-451115-h0.et.r.appspot.com/api/order/1
 Content-Type: application/json
