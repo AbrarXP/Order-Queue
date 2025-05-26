@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 // Middleware
 app.use(cors({
-    origin: "http://localhost", // ganti sesuai frontend kamu
+    origin: true,// ganti sesuai frontend kamu
     credentials: true
 }));
 app.use(express.json());
