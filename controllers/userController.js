@@ -59,7 +59,7 @@ const { username, password } = req.body;
         httpOnly: false,
         secure: false,
         sameSite: "None", 
-        maxAge: 5 * 60 * 1000 // 15 menit
+        maxAge: 60 * 60 * 1000 // 15 menit
     });
 
     res.cookie("refreshToken", refreshToken, {
