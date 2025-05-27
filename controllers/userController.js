@@ -45,7 +45,7 @@ const { username, password } = req.body;
     const accessToken = jwt.sign(
       { userId: user.id, username: user.username },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "5m" }
+      { expiresIn: "1h" }
     );
 
     const refreshToken = jwt.sign(
@@ -59,7 +59,7 @@ const { username, password } = req.body;
         httpOnly: false,
         secure: false,
         sameSite: "None", 
-        maxAge: 60 * 60 * 1000 // 15 menit
+        maxAge: 60 * 60 * 1000 // 1 menit
     });
 
     res.cookie("refreshToken", refreshToken, {
